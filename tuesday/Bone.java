@@ -1,0 +1,4 @@
+class Bone implements Edible {
+
+  
+}
