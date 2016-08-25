@@ -1,0 +1,15 @@
+Homework
+
+Singleton pattern is a creational pattern used to ensure that you have only a single instance of a particular class. It also allows you to access that single instance globally. Using a Singleton design pattern means that you don't need to pass the instance into a constructor or an argument to access it from other parts of our code (including other classes). You should simply be able to call the single instance without having to new anything up.
+
+
+The Strategy pattern is a behavioral design pattern that allows you to decide which course of action a program should take as you run it. To do this you could create two different methods inside two of your classes, and then decide when you run your code which "strategy" you want to go with. A good example I found online for the Strategy pattern was -> 
+Imagine that you're currently developing a class which can either update or create a new user record. It still needs the same inputs (name, address, mobile number, etc.), but, depending on a given situation, it has to use different functions when updating and creating. Now, you could probably just use an if-else to accomplish this, however, what if you need to use this class in a different place? In that case, you'll have to rewrite the same if-else statement all over again. Wouldn't it be easier to just specify your context?
+
+
+Factory Method pattern is also a creational pattern that defines an interface for creating an object but lets the subclass decide which class to instantiate. You would use the factory method pattern if you had multiple different variations of a single thing. For example you might have a Dog class with lots of different types of dogs in subclasses  e.g. Labrador, Poodle, Yorkshire Terrier...
+Creating a seperate Factory Method class would allow you to decide which type of Dog to create depending on the situation.
+
+
+Decorator Pattern is a structural deisgn pattern which enables you to add new/additional behaviour to an object as you run it depending on the situation
+
