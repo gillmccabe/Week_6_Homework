@@ -39,6 +39,30 @@ public class GameTest {
     assertEquals(1, game.playerCount());
   }
 
+  @Test
+  public void canGiveCurrentPlayer(){
+    game.addAPlayer(player1);
+    assertEquals("Gillian", game.giveCurrentPlayer().getName());
+  }
+
+  @Test
+  public void canChangeCurrentPlayer(){
+    game.addAPlayer(player1);
+    game.addAPlayer(player2);
+    assertEquals("Gillian", game.giveCurrentPlayer().getName());
+    game.changeCurrentPlayer();
+    assertEquals("Stuart", game.giveCurrentPlayer().getName());
+  }
+
+  @Test
+  public void playerCanTwist(){
+    game.addAPlayer(player1);
+    game.addAPlayer(player2);
+    game.dealToPlayers();
+    game.twist(player1);
+    assertEquals(3, player1.getHand().getCount());
+  }
+
 }
 
 

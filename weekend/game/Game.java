@@ -48,6 +48,10 @@ public class Game {
     }
   }
 
+  public void twist(Player player){
+    player.getHand().receiveACard(deck.dealCard());
+  }
+
   public Player getWinner(){
     Player winner = players.get(0);
     for (Player currentPlayer : players){
