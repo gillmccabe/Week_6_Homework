@@ -27,4 +27,12 @@ public class Hand{
     return counter;
   }
 
+  public String toString(){
+    String string = "";
+    for(Card card : hand){
+      string += card.toString() + "\n";
+    }
+    return string;
+  }
+
 }
