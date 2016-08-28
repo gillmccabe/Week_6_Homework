@@ -34,16 +34,28 @@ public class Game {
     return currentPlayerIndex;
   }
 
+  public void dealToPlayers(){
+    deck.fullDeck();
+    deck.shuffle();
+    for (int i = 0; i < 2; i++){
+      for (Player player : players){
+        player.getHand().receiveACard(deck.dealCard());
+      }
+    }
+  }
+
   public Player getWinner(){
     Player winner = players.get(0);
     for (Player currentPlayer : players){
       int score = currentPlayer.getHand().getValueOfHand();
-      if ((score > winner.getHand().getValueOfHand() && (score <= 21)){
+      if ((score > winner.getHand().getValueOfHand()) && (score <= 21)){
         winner = currentPlayer;
       }
     }
     return winner;
   }
+
+
 
 }
   
