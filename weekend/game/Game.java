@@ -48,8 +48,9 @@ public class Game {
     }
   }
 
-  public void twist(Player player){
+  public String twist(Player player){
     player.getHand().receiveACard(deck.dealCard());
+    return player.getHand().toString();
   }
 
   public String playerOut(Player player){
@@ -58,7 +59,7 @@ public class Game {
       return ("You've gone above 21, you're out");
     }
     else
-      return player.getHand().toString();
+      return "Your updated hand is" + " " + player.getHand().toString();
   }
 
   public Player getWinner(){
@@ -70,6 +71,10 @@ public class Game {
       }
     }
     return winner;
+  }
+
+  public String showWinner(){
+    return getWinner().getName();
   }
 
 
