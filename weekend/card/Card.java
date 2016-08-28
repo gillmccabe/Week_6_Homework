@@ -22,5 +22,9 @@ public class Card {
     return rank.getValue();
   }
 
+  public String toString() {
+    return rank.toString() + "of" + suit.toString();
+  }
+
 
 }

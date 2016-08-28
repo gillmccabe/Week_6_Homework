@@ -38,7 +38,7 @@ public class Game {
     Player winner = players.get(0);
     for (Player currentPlayer : players){
       int score = currentPlayer.getHand().getValueOfHand();
-      if (score > winner.getHand().getValueOfHand()){
+      if ((score > winner.getHand().getValueOfHand() && (score <= 21)){
         winner = currentPlayer;
       }
     }
