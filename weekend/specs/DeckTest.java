@@ -16,7 +16,7 @@ public class DeckTest {
   }
 
   @Test
-  public void canFillDeck(){
+  public void canCreateDeck(){
     deck.fullDeck();
     assertEquals(52, deck.getCount());
   }

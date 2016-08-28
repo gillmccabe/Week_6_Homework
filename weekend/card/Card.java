@@ -23,7 +23,7 @@ public class Card {
   }
 
   public String toString() {
-    return rank.toString() + "of" + suit.toString();
+    return rank.toString() + " of " + suit.toString();
   }
 
 

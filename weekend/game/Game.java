@@ -11,7 +11,7 @@ public class Game {
    private int currentPlayerIndex;
 
 
-  public Game(){
+  public Game(Deck deck){
     this.players = new ArrayList<Player>();
     this.deck = new Deck();
     currentPlayerIndex = 0;
@@ -34,6 +34,10 @@ public class Game {
     return currentPlayerIndex;
   }
 
+  public Deck getDeck(){
+    return this.deck;
+  }
+
   public void dealToPlayers(){
     deck.fullDeck();
     deck.shuffle();
@@ -54,6 +58,8 @@ public class Game {
     }
     return winner;
   }
+
+
 
 
 

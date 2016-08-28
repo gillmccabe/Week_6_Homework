@@ -26,5 +26,10 @@ public class CardTest {
     assertEquals(2, card.getValue());
    }
 
+   @Test
+   public void canGetString(){
+    assertEquals("TWO of HEARTS", card.toString());
+   }
+
 
 }
