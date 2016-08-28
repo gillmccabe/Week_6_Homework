@@ -55,6 +55,15 @@ public class GameTest {
   }
 
   @Test
+  public void canDealToPlayers(){
+    game.addAPlayer(player1);
+    game.addAPlayer(player2);
+    game.dealToPlayers();
+    assertEquals(2, player1.getHand().getCount());
+    assertEquals(2, player2.getHand().getCount());
+  }
+
+  @Test
   public void playerCanTwist(){
     game.addAPlayer(player1);
     game.addAPlayer(player2);
@@ -63,68 +72,16 @@ public class GameTest {
     assertEquals(3, player1.getHand().getCount());
   }
 
+  @Test
+  public void canGetWinner(){
+    game.addAPlayer(player1);
+    game.addAPlayer(player2);
+    player1.getHand().receiveACard(card1);
+    player2.getHand().receiveACard(card2);
+    Player winner = game.getWinner();
+    assertEquals("Stuart", winner.getName());
+  }
+
 }
 
 
-
-// @Test
-// public void checkPileStartsEmpty(){
-//   assertEquals(0, game.cardPileSize());
-// }
-
-// @Test
-// public void canAddCardToCardPile(){
-//  game.addToCardPile(card1);
-//  assertEquals(1, game.cardPileSize());
-
-// }
-
-// @Test
-// public void canClearCardPile(){
-//   game.addToCardPile(card1);
-//   assertEquals(1, game.cardPileSize());
-//   game.clearCardPile();
-//   assertEquals(0, game.cardPileSize());
-// }
-
-// @Test 
-// public void canRemoveCardPile() {
-//   game.addToCardPile(card1);
-//   assertEquals(1, game.cardPileSize());
-//   game.removeFromCardPile(card1);
-//   assertEquals(0, game.cardPileSize());
-// }
-
-// @Test
-// public void returnsCardOnRemoval() {
-//   game.addToCardPile(card1);
-//   assertEquals(1, game.cardPileSize());
-//   Card card = game.removeFromCardPile(card1);
-//   assertEquals(SuitType.DIAMONDS, card.getSuit());
-// }
-
-// @Test
-// public void canDealCardToPlayer() {
-//   game.addToCardPile(card1);
-//   game.dealCard(player1, card1);
-//   assertEquals(1, player1.handCount());
-//   assertEquals(0, game.cardPileSize());
-// }
-
-// @Test
-// public void canTakeCardFromPlayer(){
-//   player1.handAdd(card1);
-//   game.returnToDeck(player1, card1);
-//   assertEquals(0, player1.handCount());
-//   assertEquals(1, game.cardPileSize());
-// }
-
-// @Test
-// public void canMoveCardBetweenPLayers(){
-//   player1.handAdd(card1);
-//   game.moveCardBetweenPlayers(player1, player2, card1);
-//   assertEquals(0, player1.handCount());
-//   assertEquals(1, player2.handCount());
-// }
-
-// }
