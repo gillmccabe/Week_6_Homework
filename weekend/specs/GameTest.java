@@ -73,6 +73,18 @@ public class GameTest {
   }
 
   @Test
+  public void playerCanBeOut(){
+    game.addAPlayer(player1);
+    game.addAPlayer(player2);
+    player1.getHand().receiveACard(card1);
+    player2.getHand().receiveACard(card2);
+    player2.getHand().receiveACard(card3);
+    player2.getHand().receiveACard(card4);
+    assertEquals("You've gone above 21, you're out", game.playerOut(player2));
+
+  }
+
+  @Test
   public void canGetWinner(){
     game.addAPlayer(player1);
     game.addAPlayer(player2);

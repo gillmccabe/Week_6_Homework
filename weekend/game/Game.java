@@ -52,6 +52,15 @@ public class Game {
     player.getHand().receiveACard(deck.dealCard());
   }
 
+  public String playerOut(Player player){
+    if (player.getHand().getValueOfHand() > 21) {
+      players.remove(player);
+      return ("You've gone above 21, you're out");
+    }
+    else
+      return player.getHand().toString();
+  }
+
   public Player getWinner(){
     Player winner = players.get(0);
     for (Player currentPlayer : players){
