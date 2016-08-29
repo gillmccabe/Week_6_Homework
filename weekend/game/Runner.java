@@ -29,7 +29,7 @@ public class Runner {
     System.out.println(player2.getHand().toString());
 
 
-// Code below should allow players to stick or twist, but currently can't save new card from twist to hand. Need to add while loop to ensure player is not given option to twist or stick if they go over 21.
+// Code below should allow players to stick or twist as long as they are not over 21, but currently can't save new card from twist to hand.
     
     // System.out.println("\n" + player1.getName() + " " + "do you want to stick or twist?");
     // String userInput = input.next();
