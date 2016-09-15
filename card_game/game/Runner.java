@@ -30,30 +30,33 @@ public class Runner {
 
 
 // Code below should allow players to stick or twist as long as they are not over 21, but currently can't save new card from twist to hand.
-    
+
+    // do {
     // System.out.println("\n" + player1.getName() + " " + "do you want to stick or twist?");
-    // String userInput = input.next();
-    // while (player1.getHand().getValueOfHand() < 21) {
+    //   String userInput = input.next();
     //   if(userInput == "twist"){
-    //     System.out.println(game.twist(player1));
+    //     game.twist(player1);
+    //     System.out.println(game.playerOut(player1));
     //   }
     //   else {
     //     System.out.println(game.playerOut(player1));
     //     break;
     //   }
     // }
+    // while (player1.getHand().getValueOfHand() < 21); 
 
-    // System.out.println("\n" + player2.getName() + " " + "do you want to stick or twist?");
-    // String userInput2 = input.next();
-    // while (player2.getHand().getValueOfHand() < 21) {
-    //   if(userInput2 == "twist"){
-    //     System.out.println(game.twist(player2));
-    //   }
-    //   else {
-    //     System.out.println(game.playerOut(player2));
-    //     break;
-    //   }
-    // }
+    // 
+    while (player2.getHand().getValueOfHand() < 21) {
+    System.out.println("\n" + player2.getName() + " " + "do you want to stick or twist?");
+        String userInput2 = input.next();
+      if(userInput2 == "twist"){
+        System.out.println(game.twist(player2));
+      }
+      else {
+        System.out.println(game.playerOut(player2));
+        break;
+      }
+    }
 
     if (game.getWinner() != null){
       System.out.println("The winner is: ");

@@ -59,7 +59,7 @@ public class Game {
       return ("You've gone above 21, you're out");
     }
     else
-      return "Your updated hand is" + "\n" + player.getHand().toString();
+      return "Your hand is" + "\n" + player.getHand().toString();
   }
 
   public Player getWinner(){
